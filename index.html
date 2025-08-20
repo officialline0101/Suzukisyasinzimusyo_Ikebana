@@ -963,6 +963,7 @@
         </h1>
 
         <div class="label">お好きなお色味<span class="required">必須</span><br><span style="font-size: 14px;">(複数選択可)</span></div>
+        <div class="info-text">お花の品種の指定はできません。<br>お好きなお色味で、市場に出ている旬のお花をご用意致します。</div>
         <div class="visit-buttons">
             <button type="button" id="locationPlanVisit" onclick="selectVisit(this)">白</button>
             <button type="button" id="dailyLifePlanVisit" onclick="selectVisit(this)">グリーン</button>
@@ -1128,7 +1129,7 @@ function submitForm() {
     };
 
     if (!formData.visitCount || formData.visitCount.length === 0) {
-        alert('プランをお選びください');
+        alert('お好きなお色味をお選びください');
         return;
     }
 
@@ -1139,7 +1140,7 @@ function submitForm() {
 
     liff.sendMessages([{
         type: 'text',
-        text: `【生花】\n｟プラン｠\n${visitCountText}`
+        text: `【生花】\n｟お好きなお色味｠\n${visitCountText}`
     }]).then(() => {
         alert('お問合せありがとうございます。追って担当者から返信をさせて頂きます。');
         liff.closeWindow();
