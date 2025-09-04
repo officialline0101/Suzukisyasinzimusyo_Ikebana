@@ -1140,7 +1140,7 @@ function submitForm() {
 
     liff.sendMessages([{
         type: 'text',
-        text: `【予約フォーム】\n【生花】\n｟お好きなお色味｠\n${visitCountText}`
+        text: `【生花】\n｟お好きなお色味｠\n${visitCountText}`
     }]).then(() => {
         alert('お問合せありがとうございます。追って担当者から返信をさせて頂きます。');
         liff.closeWindow();
